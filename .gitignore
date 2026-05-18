@@ -5,3 +5,5 @@ learn-terraform-provisioning/tf-packer
 learn-terraform-provisioning/tf-packer.pub
 
 *.box
+
+exos/**/manifest.json
