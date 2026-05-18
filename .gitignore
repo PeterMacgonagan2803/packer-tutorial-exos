@@ -7,3 +7,4 @@ learn-terraform-provisioning/tf-packer.pub
 *.box
 
 exos/**/manifest.json
+**/manifest.json.lock
