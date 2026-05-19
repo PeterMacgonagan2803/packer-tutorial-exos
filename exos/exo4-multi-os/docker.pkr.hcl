@@ -40,7 +40,10 @@ build {
   provisioner "shell" {
     only = ["docker.alpine319"]
     inline = [
-      "apk add --no-cache curl wget",
+      "# apk via https peut planter selon le poste (cert ssl)",
+      "sed -i 's/https/http/g' /etc/apk/repositories",
+      "apk update --no-cache",
+      "apk add --no-cache curl wget ca-certificates",
       "uname -a > /system-info.txt",
       "cat /etc/os-release >> /system-info.txt",
       "printf '%s\\n' '#!/bin/sh' 'echo \"=== system-info.txt ===\"' 'cat /system-info.txt' 'echo \"=== live ===\"' 'uname -a' > /usr/local/bin/show-info.sh",
