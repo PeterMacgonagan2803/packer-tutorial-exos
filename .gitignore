@@ -8,3 +8,5 @@ learn-terraform-provisioning/tf-packer.pub
 
 exos/**/manifest.json
 **/manifest.json.lock
+
+exos/exo5-application/ci-cd/node_modules/
